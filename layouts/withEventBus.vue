@@ -17,7 +17,7 @@
 export default {
   data(){
     return {
-      title: 'With Store Layout'
+      title: 'With Layout'
     }
   },
   created(){

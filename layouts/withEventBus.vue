@@ -26,7 +26,10 @@ export default {
         this.changeTitle(title)
       })
 		}
-  }, 
+  },
+  beforeDestroy() {
+    this.$bus.$off('changeTitle')
+  },
   methods: {
     changeTitle(title){
       alert(title)

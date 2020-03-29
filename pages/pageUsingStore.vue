@@ -21,7 +21,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
-  layout: 'withEventBusLayout',
+  layout: 'withStoreLayout',
   components: {
     Logo
   },

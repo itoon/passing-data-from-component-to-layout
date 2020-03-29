@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12">
           <div class="text-center">
-            <h1>{{ title }}</h1>
+            <h1>{{ getTitle }}</h1>
           </div>
         </div>
       </div>
@@ -15,15 +15,17 @@
 
 <script>
 export default {
+  /*
   data(){
     return {
-      title: 'With Store Layout'
+      title: ''
     }
   },
-  watch: {
-    '$store.getters.state.title': function(val) {      
-      this.changeTitle(val)
-    },
+  */
+  watch: { 
+    getTitle(val){
+      this.changeTitle(val)    
+    } 
     /*
     '$store.state.title': function(val) {      
       this.changeTitle(val)
@@ -33,10 +35,17 @@ export default {
     }
     */
   },
+  computed: {
+    getTitle(){      
+      return this.$store.getters.getTitle
+    }
+  },
   methods: {
+    /*
     changeTitle(title){
       this.title = title
     }
+    */
   }
 }
 </script>

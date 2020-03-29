@@ -9,7 +9,7 @@
         </div>
       </div>
     </div>    
-    <nuxt @changeTitle="title = $event" />    
+    <nuxt/>    
   </div>
 </template>
 
@@ -17,7 +17,20 @@
 export default {
   data(){
     return {
-      title: 'Title from Layout'
+      title: 'With Store Layout'
+    }
+  },
+  created(){
+    if (process.client) {
+      this.$bus.$on("changeTitle", (title) => {
+        this.changeTitle(title)
+      })
+		}
+  }, 
+  methods: {
+    changeTitle(title){
+      alert(title)
+      this.title = title
     }
   }
 }

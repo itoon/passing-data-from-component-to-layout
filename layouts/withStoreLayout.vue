@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12">
           <div class="text-center">
-            <h1>{{ getTitle }}</h1>
+            <h1>{{ title }}</h1>
           </div>
         </div>
       </div>
@@ -15,16 +15,15 @@
 
 <script>
 export default {
-  /*
   data(){
     return {
-      title: ''
+      title: 'Store Layout'
     }
   },
-  */
+  
   watch: { 
     getTitle(val){
-      this.changeTitle(val)    
+      this.changeTitle(val)
     } 
     /*
     '$store.state.title': function(val) {      
@@ -41,11 +40,9 @@ export default {
     }
   },
   methods: {
-    /*
     changeTitle(title){
       this.title = title
     }
-    */
   }
 }
 </script>

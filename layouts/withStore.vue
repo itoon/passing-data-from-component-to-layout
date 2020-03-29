@@ -21,9 +21,12 @@ export default {
     }
   },
   watch: {
+    '$store.getters.state.title': function(val) {      
+      this.changeTitle(val)
+    },
     '$store.state.title': function(val) {      
       this.changeTitle(val)
-    }     
+    }    
     /*
     '$store.state.title': (newVal, oldVal) {
       this.changeTitle(newVal) // can't access this
